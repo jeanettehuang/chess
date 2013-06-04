@@ -50,6 +50,7 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\SplashScreen.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\clickToMove.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\endGame.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePieces.js" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
