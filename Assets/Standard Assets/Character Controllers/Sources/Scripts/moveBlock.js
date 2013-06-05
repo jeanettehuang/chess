@@ -1,4 +1,4 @@
-var maxUpAndDown : float = 1; // amount of meters going up and down
+var maxUpAndDown : float = 2; // amount of meters going up and down
 var speed : float = 50; // up and down speed
 protected var angle : float = -90;  // angle to determine the height by using the sinus
 protected var toDegrees : float = Mathf.PI/180;  // radians to degrees
