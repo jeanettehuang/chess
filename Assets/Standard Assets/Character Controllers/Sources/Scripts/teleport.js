@@ -43,6 +43,42 @@ function OnTriggerEnter (other : Collider){
 		a = GameObject.Find("F3-teleport");
 		a.collider.enabled = true;
 	}
+	
+	/// D6 and G5
+	if (other.tag == "Player" && this.name=="D6-teleport" ) {
+		Debug.Log("collide D6");
+		
+		a = GameObject.Find("G5-teleport");
+				
+		// prevPos = this.transform.position;
+		yield WaitForSeconds(0.5);
+		
+		a.collider.enabled = false;
+		other.transform.position = Vector3(8,0,2); // teleport to G5
+		
+	}
+	if (other.tag == "Player" && this.name=="G5-teleport") {
+			Debug.Log("collide G5, " + this.name);
+			
+			a = GameObject.Find("D6-teleport");
+						
+			yield WaitForSeconds(0.5);					
+			
+			a.collider.enabled = false;
+			other.transform.position = Vector3(10,0,8); // teleport to D6;
+			
+			
+		}
+	if (other.tag == "Player" && (this.name=="F5Collide" || this.name=="F6Collide" ||this.name=="G6Collide" || this.name=="TriggerBBase")) {		
+		Debug.Log("enable");
+		a = GameObject.Find("G5-teleport");
+		a.collider.enabled = true;
+	}
+	if (other.tag == "Player" && (this.name=="D6-U" || this.name=="D6-D" ||this.name=="D6-L" || this.name=="D6-R")) {
+		Debug.Log("hihi - "+this.name);
+		a = GameObject.Find("D6-teleport");
+		a.collider.enabled = true;
+	}
 		
 	
 	

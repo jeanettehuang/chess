@@ -28,7 +28,7 @@ function Update () {
     	//jump
     	if (Input.GetKeyDown ("space")){
     			Debug.Log("space" + transform.position.y);
-    			if (transform.position.y <= 3) { 
+    	 
     				Debug.Log("space2");
     			//rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     			
@@ -40,7 +40,7 @@ function Update () {
     			rigidbody.velocity += 9 * Vector3.up;
     			//Camera.main.transform.position = cameraPos;
               
-       	 }
+       	 
         }
         
       //Debug.Log(transform.position);
