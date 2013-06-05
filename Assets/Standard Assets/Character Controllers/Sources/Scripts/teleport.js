@@ -18,7 +18,7 @@ function OnTriggerEnter (other : Collider){
 		
 	}
 	if (other.tag == "Player" && this.name=="F3-teleport") {
-			Debug.Log("collide F3");
+			Debug.Log("collide F3, " + this.name);
 			
 			cameraPos = camera.main.transform.position;			
 			
@@ -34,12 +34,12 @@ function OnTriggerEnter (other : Collider){
 			
 		}
 	if (other.tag == "Player" && (this.name=="B8-t" || this.name=="A7-t" ||this.name=="B7-t")) {
-		Debug.Log("hihi");
+		Debug.Log("hihi - " + this.name);
 		a = GameObject.Find("A8-teleport");
 		a.collider.enabled = true;
 	}
 	if (other.tag == "Player" && (this.name=="F3-U" || this.name=="F3-D" ||this.name=="F3-L" || this.name=="F3-R")) {
-		Debug.Log("hihi");
+		Debug.Log("hihi - "+this.name);
 		a = GameObject.Find("F3-teleport");
 		a.collider.enabled = true;
 	}
@@ -49,15 +49,10 @@ function OnTriggerEnter (other : Collider){
 	
 }
 
-function OnTriggerExit (other : Collider) {
-	prevPos = Vector3(0,0,0);
-	Debug.Log("on exit");
-	Debug.Log(prevPos);
-}
 
 function Update() {
 	if (Input.GetKeyDown (KeyCode.DownArrow) || Input.GetKeyDown (KeyCode.UpArrow) ) {
-		Debug.Log("key");
+		//Debug.Log("key");
 
 		
 	}

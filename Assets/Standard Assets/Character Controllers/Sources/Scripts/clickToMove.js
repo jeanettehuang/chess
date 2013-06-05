@@ -4,7 +4,7 @@ static var selectedId : int;
 static var speed : int = 1;
  
 function Update () {
-    
+        	
        if (Input.GetKeyDown (KeyCode.UpArrow)) {
        		transform.Translate (Vector3(0,0,2) );
        	}
@@ -30,7 +30,7 @@ function Update () {
     			Debug.Log("space" + transform.position.y);
     			if (transform.position.y <= 3) { 
     				Debug.Log("space2");
-    			rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+    			//rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     			
     			Debug.Log(transform.position);
     			//cameraPos = Camera.main.transform.position;

@@ -50,8 +50,10 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\SplashScreen.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\TriggerA.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\clickToMove.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\endGame.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\moveBlock.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePieces.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\teleport.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\teleportA8.js" />
