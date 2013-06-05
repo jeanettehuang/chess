@@ -22,7 +22,6 @@ function OnTriggerEnter (other : Collider) {
 
 	if (other.tag == "Player" && (this.name=="F3-U" || this.name=="F3-D" ||this.name=="F3-L" || this.name=="F3-R")) {
 		Debug.Log("hihi - "+this.name);
-		a.collider.enabled = true;
 	}
 	
 	// D6 and G5
