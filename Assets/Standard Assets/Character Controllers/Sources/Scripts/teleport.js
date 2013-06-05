@@ -22,6 +22,7 @@ function OnTriggerEnter (other : Collider) {
 
 	if (other.tag == "Player" && (this.name=="F3-U" || this.name=="F3-D" ||this.name=="F3-L" || this.name=="F3-R")) {
 		Debug.Log("hihi - "+this.name);
+		a.collider.enabled = true;
 	}
 	
 	// D6 and G5
@@ -48,4 +49,12 @@ function OnTriggerEnter (other : Collider) {
 		a = GameObject.Find("D6-teleport");
 		a.collider.enabled = true;
 	}	
+	
+	// For intro level, teleporting
+	if (other.tag == "Player" && this.name=="F3-teleport-2") {
+		a = GameObject.Find("E7-teleport");
+		yield WaitForSeconds(0.5);					
+		a.collider.enabled = false;
+		other.transform.position = Vector3(12,7.5,6); // teleport to E7;	
+	}
 }

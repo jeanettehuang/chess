@@ -36,3 +36,17 @@
 //	}
 //}
 //
+
+function OnTriggerEnter (other : Collider) {
+	// Win intro level, teleporting
+	if (other.tag == "Player" && this.name=="E8Collide-Level1") {
+		yield WaitForSeconds(0.15);
+		Application.LoadLevel(1);
+	}
+	
+	// Win hard level
+	if (other.tag == "Player" && this.name=="E8Collide-Level3") {
+		yield WaitForSeconds(0.15);
+		Application.LoadLevel(2);
+	}
+}
