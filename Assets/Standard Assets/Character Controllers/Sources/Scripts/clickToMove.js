@@ -1,7 +1,7 @@
 function Update () {
     	
    if (Input.GetKeyDown (KeyCode.UpArrow)) {
-   		transform.Translate (Vector3(0,0,2) );
+   		transform.Translate (Vector3(0,0,2));
    	}
    
    if (Input.GetKeyDown (KeyCode.DownArrow)) transform.Translate (Vector3(0,0,-2));
@@ -23,7 +23,7 @@ function Update () {
 	//jump
 	if (Input.GetKeyDown ("space")){
 		Debug.Log("space" + transform.position.y);
-		rigidbody.velocity += 9 * Vector3.up;
+		rigidbody.velocity += 5 * Vector3.up;
     }
     
 	if (Input.GetMouseButtonDown(0)) {
