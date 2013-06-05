@@ -27,17 +27,18 @@ function Update () {
     	
     	//jump
     	if (Input.GetKeyDown ("space")){
-    			if (transform.position.y <= 2) { 
-    			
+    			Debug.Log("space" + transform.position.y);
+    			if (transform.position.y <= 3) { 
+    				Debug.Log("space2");
     			rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     			
     			Debug.Log(transform.position);
-    			cameraPos = Camera.main.transform.position;
+    			//cameraPos = Camera.main.transform.position;
     			//transform.Translate (Vector3(0,260*Time.deltaTime,0));
     			//transform.Translate(Vector3.up * 150 * Time.deltaTime, Space.World);
     			//rigidbody.AddForce(Vector3.up*500);
     			rigidbody.velocity += 9 * Vector3.up;
-    			Camera.main.transform.position = cameraPos;
+    			//Camera.main.transform.position = cameraPos;
               
        	 }
         }
