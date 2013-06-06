@@ -16,7 +16,7 @@ function Update () {
 		if (Time.time > lTime + 1f || Time.time < 1f) {
 			lTime = Time.time;
 		
-			rigidbody.velocity += 5 * Vector3.up;
+			rigidbody.velocity += 7 * Vector3.up;
 		}
     }
     
