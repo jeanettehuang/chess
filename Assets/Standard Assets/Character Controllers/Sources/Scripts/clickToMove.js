@@ -1,3 +1,4 @@
+var lTime : float;
 function Update () {
     	
 	if (Input.GetKeyDown (KeyCode.UpArrow)) transform.Translate (Vector3(0,0,2)); // up
@@ -10,9 +11,13 @@ function Update () {
 	if (Input.GetKeyDown (KeyCode.S)) transform.Translate (Vector3(-2,0,-2)); // diagonal down and left
 	
 	// Jump
-	if (Input.GetKeyDown ("space")){
-		Debug.Log("space" + transform.position.y);
-		rigidbody.velocity += 5 * Vector3.up;
+	if (Input.GetKeyDown ("space")){		
+		Debug.Log("space, time: " + Time.time);
+		if (Time.time > lTime + 1f || Time.time < 1f) {
+			lTime = Time.time;
+		
+			rigidbody.velocity += 5 * Vector3.up;
+		}
     }
     
 	if (Input.GetMouseButtonDown(0)) {
