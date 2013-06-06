@@ -24,5 +24,6 @@ function Update () {
 	// Die after falling off board
 	if (transform.position.y < -1.2){ 
 		Application.LoadLevel(Application.loadedLevel);
+		HealthControl.LIVES -= 1;
 	}
 }

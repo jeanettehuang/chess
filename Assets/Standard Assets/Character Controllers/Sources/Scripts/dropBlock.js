@@ -7,6 +7,7 @@ function OnTriggerEnter (other : Collider){
 		Debug.Log(other.transform.position.y);
 		if (other.transform.position.y < -1.2){ 
 			Application.LoadLevel(Application.loadedLevel);
+			HealthControl.LIVES -= 1;
 		}
 	}
 	if (other.tag == "Player" && (this.name=="G6Collide") ) {
@@ -15,6 +16,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(1);
 		if (other.transform.position.y < -1.2){ 
 			Application.LoadLevel(Application.loadedLevel);
+			HealthControl.LIVES -= 1;
 		}
 	}
 	if (other.tag == "Player" && (this.name=="F5Collide") ) {
@@ -23,6 +25,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(1);
 		if (other.transform.position.y < -1.2){ 
 			Application.LoadLevel(Application.loadedLevel);
+			HealthControl.LIVES -= 1;
 		}
 	}
 	if (other.tag == "Player" && (this.name=="F6Collide") ) {
@@ -31,6 +34,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(1);
 		if (other.transform.position.y < -1.2){ 
 			Application.LoadLevel(Application.loadedLevel);
+			HealthControl.LIVES -= 1;
 		}
 	}
 
