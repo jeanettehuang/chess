@@ -11,7 +11,7 @@
 		
 		if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.25,100,50),btnTexture)){
             Debug.Log("Clicked the button with an image");
-            Application.LoadLevel(1);
+            Application.LoadLevel(0);
             }
 		
         if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.25,100,50),"Restart Game")) {
