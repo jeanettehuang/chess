@@ -67,9 +67,10 @@ function Update () {
 		else {Cam.GetComponent("MouseLook").enabled = false;}
 	}
 
-//	// Die after falling off board
-//	if (transform.position.y < -1.2){ 
-//		Application.LoadLevel(Application.loadedLevel);
-//		HealthControl.LIVES -= 1;
-//	}
+	// Die after falling off board
+	if (transform.position.y < -10.0){ 
+		Debug.Log("falling off board: " + transform.position.y);
+		Application.LoadLevel(Application.loadedLevel);
+		HealthControl.LIVES -= 1;
+	}
 }
