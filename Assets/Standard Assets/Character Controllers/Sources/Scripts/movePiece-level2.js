@@ -5,6 +5,8 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		Debug.Log("collide");
 		GameObject.Find("pawnD5").transform.position = other.transform.position;
+		
+		GameObject.Find("tryagainMesh").renderer.enabled = true;
 		Application.LoadLevel(Application.loadedLevel);
 	}
 }

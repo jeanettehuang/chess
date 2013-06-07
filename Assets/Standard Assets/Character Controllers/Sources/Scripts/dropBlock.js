@@ -6,6 +6,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(1);
 		Debug.Log(other.transform.position.y);
 		if (other.transform.position.y < -1.2){ 
+			GameObject.Find("tryagainMesh").renderer.enabled = true;
 			Application.LoadLevel(Application.loadedLevel);
 			HealthControl.LIVES -= 1;
 		}
@@ -15,6 +16,7 @@ function OnTriggerEnter (other : Collider){
 		GameObject.Find("G6").rigidbody.useGravity = true;
 		yield WaitForSeconds(1);
 		if (other.transform.position.y < -1.2){ 
+			GameObject.Find("tryagainMesh").renderer.enabled = true;
 			Application.LoadLevel(Application.loadedLevel);
 			HealthControl.LIVES -= 1;
 		}
@@ -24,6 +26,7 @@ function OnTriggerEnter (other : Collider){
 		GameObject.Find("F5").rigidbody.useGravity = true;
 		yield WaitForSeconds(1);
 		if (other.transform.position.y < -1.2){ 
+			GameObject.Find("tryagainMesh").renderer.enabled = true;
 			Application.LoadLevel(Application.loadedLevel);
 			HealthControl.LIVES -= 1;
 		}
@@ -33,6 +36,7 @@ function OnTriggerEnter (other : Collider){
 		GameObject.Find("F6").rigidbody.useGravity = true;
 		yield WaitForSeconds(1);
 		if (other.transform.position.y < -1.2){ 
+			GameObject.Find("tryagainMesh").renderer.enabled = true;
 			Application.LoadLevel(Application.loadedLevel);
 			HealthControl.LIVES -= 1;
 		}

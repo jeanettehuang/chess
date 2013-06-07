@@ -1,5 +1,6 @@
 var lTime : float;
 var arrowTime : float;
+
 function Update () {
     
     // Arrow Keys	
@@ -68,9 +69,15 @@ function Update () {
 	}
 
 	// Die after falling off board
-	if (transform.position.y < -10.0){ 
+
+	if (transform.position.y < -10.0){		
 		Debug.Log("falling off board: " + transform.position.y);
+		
+		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		//yield WaitForSeconds(1);		
+		//GameObject.Find("tryagainMesh").renderer.enabled = false;
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
+		
 	}
 }

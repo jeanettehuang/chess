@@ -13,6 +13,7 @@ function OnTriggerEnter (other : Collider){
 		Debug.Log(other.transform.position.y);
 		
 		if (other.transform.position.y < -1.2){ 
+			GameObject.Find("tryagainMesh").renderer.enabled = true;
 			Application.LoadLevel(Application.loadedLevel);
 			HealthControl.LIVES -= 1;
 		}
