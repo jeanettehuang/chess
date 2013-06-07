@@ -1,6 +1,6 @@
 function OnTriggerEnter (other : Collider){
 	
-	if (other.tag == "Player" && (this.name=="life1") ) {
+	if (other.tag == "Player" && (this.name=="life1" || this.name=="life2") ) {
 	
 	// Get an extra life
 		
@@ -14,7 +14,7 @@ function OnTriggerEnter (other : Collider){
 		}
 		
 		// Disable heart		
-		GameObject.Find("life1").SetActive(false);
+		GameObject.Find(this.name).SetActive(false);
 		
 		
 	}
