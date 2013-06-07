@@ -74,10 +74,14 @@ function Update () {
 		Debug.Log("falling off board: " + transform.position.y);
 		
 		GameObject.Find("tryagainMesh").renderer.enabled = true;
-		//yield WaitForSeconds(1);		
-		//GameObject.Find("tryagainMesh").renderer.enabled = false;
+
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 		
+	}
+	
+	// Start with six lives so it makes sense to pick up a life in level 1
+	if (Application.loadedLevel == 0 && Time.time == 0) {
+		HealthControl.LIVES -= 1;
 	}
 }
