@@ -10,6 +10,9 @@
 
 // Draws 2 buttons, one with an image, and other with a text
 // And print a message when they got clicked.
+
+static var reloadTime;
+
 var btnTexture : Texture;
 function OnGUI() {
 
@@ -20,6 +23,7 @@ function OnGUI() {
 	
 	if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.85,140,50),btnTexture)){
         Application.LoadLevel(1);
+       	reloadTime = 0;
     }
 	
     if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.85,140,50),"START GAME")) {

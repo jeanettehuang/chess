@@ -80,8 +80,14 @@ function Update () {
 		
 	}
 	
+	if (Application.loadedLevel == 1) {
+		Debug.Log(showsplash.reloadTime);
+	}
+
 	// Start with six lives so it makes sense to pick up a life in level 1
-	if (Application.loadedLevel == 0 && Time.time == 0 && HealthControl.LIVES == 7) {
+	if (Application.loadedLevel == 1 && showsplash.reloadTime == 0 && HealthControl.LIVES == 7) {
 		HealthControl.LIVES = 6;
+		showsplash.reloadTime = Time.time;
+		Debug.Log("level 1");
 	}
 }
