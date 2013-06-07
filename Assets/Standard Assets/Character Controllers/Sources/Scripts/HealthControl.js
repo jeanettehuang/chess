@@ -39,7 +39,7 @@ function Update () {
 		break;
 		
 		case 0:
-			Application.LoadLevel(4);
+			Application.LoadLevel(6);
 			LIVES = 7;
 		break;
 	}

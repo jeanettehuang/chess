@@ -9,12 +9,12 @@
             return;
         }
 		
-		if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.25,100,50),btnTexture)){
+		if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.55,140,50),btnTexture)){
             Debug.Log("Clicked the button with an image");
             Application.LoadLevel(0);
             }
 		
-        if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.25,100,50),"Restart Game")) {
+        if (GUI.Button(Rect(Screen.width*0.5,Screen.height*0.55,140,50),"RESTART GAME")) {
             Debug.Log("Clicked the button with text");
 
             }
