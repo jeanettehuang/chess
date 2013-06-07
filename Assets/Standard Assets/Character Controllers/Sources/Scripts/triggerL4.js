@@ -1,3 +1,6 @@
+var transparent : Material;
+var gold : Material;
+
 function OnTriggerEnter (other : Collider){
 	
 	if (other.tag == "Player" && this.name=="TriggerBBase" ) {
@@ -81,12 +84,11 @@ function OnTriggerEnter (other : Collider){
 	
 	if (other.tag == "Player" && this.name=="starCollider") {
 		GameObject.Find("star").SetActive(false);
-		//GameObject.Find("D4").transform.position.y = 2;
-		//GameObject.Find("H8bColliderD4").GetComponent(movePieceL4).enabled = false;
-		GameObject.Find("H8bColliderD4").SetActive(false);
-		GameObject.Find("D4").GetComponent(moveBlock).enabled=true;
-		GameObject.Find("TriggerStar").GetComponent(moveBlock).enabled=true;
-		GameObject.Find("C4").GetComponent(moveBlock).enabled=false;
+		GameObject.Find("TriggerStar").collider.enabled = true;;
+		GameObject.Find("TriggerStarBase").collider.enabled = true;
+		GameObject.Find("TriggerStarBase").collider.isTrigger = true;
+		GameObject.Find("TriggerStar").renderer.material = GameObject.Find("E8").renderer.material;
+		//GameObject.Find("TriggerStar").renderer.material = gold;
 		
 	}
 	

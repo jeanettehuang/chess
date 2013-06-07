@@ -40,7 +40,7 @@ function Update () {
 		
 		case 0:
 			Application.LoadLevel(4);
-			LIVES = 5;
+			LIVES = 7;
 		break;
 	}
 }
