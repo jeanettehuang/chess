@@ -2,8 +2,8 @@ var health1 : Texture2D; // one life left
 var health2 : Texture2D; // two lives left
 var health3 : Texture2D; // three lives left
 var health4 : Texture2D; // four lives left
-var health5 : Texture2D; // five health
-var health6 : Texture2D; // six health
+var health5 : Texture2D; // five lives left
+var health6 : Texture2D; // six lives left
 var health7 : Texture2D; // full health
 
 static var LIVES = 7;

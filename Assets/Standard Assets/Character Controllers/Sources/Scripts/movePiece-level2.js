@@ -6,7 +6,7 @@ function OnTriggerEnter (other : Collider){
 		Debug.Log("collide");
 		GameObject.Find("pawnD5").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 	}
 }

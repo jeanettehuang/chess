@@ -4,7 +4,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		GameObject.Find("pawnE5").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -12,7 +12,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		GameObject.Find("pawnG4").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -20,7 +20,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.15);
 		GameObject.Find("pawnG8").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -30,7 +30,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		GameObject.Find("pawnE3").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -41,7 +41,7 @@ function OnTriggerEnter (other : Collider){
 		Debug.Log("collide");
 		GameObject.Find("pawnD5").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -49,7 +49,7 @@ function OnTriggerEnter (other : Collider){
 	// Die after falling off board
 	if (transform.position.y < -1.2){
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true; 
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}

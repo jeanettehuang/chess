@@ -73,7 +73,9 @@ function Update () {
 	if (transform.position.y < -10.0){		
 		Debug.Log("falling off board: " + transform.position.y);
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) {
+			GameObject.Find("tryagainMesh").renderer.enabled = true;
+		}
 
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;

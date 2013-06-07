@@ -5,7 +5,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		GameObject.Find("bishopA8").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -13,7 +13,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		GameObject.Find("bishopH8").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
@@ -22,7 +22,7 @@ function OnTriggerEnter (other : Collider){
 		yield WaitForSeconds(0.25);
 		GameObject.Find("pawnC5").transform.position = other.transform.position;
 		
-		GameObject.Find("tryagainMesh").renderer.enabled = true;
+		if (HealthControl.LIVES > 1) { GameObject.Find("tryagainMesh").renderer.enabled = true;}
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
