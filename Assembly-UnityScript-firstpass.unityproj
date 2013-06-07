@@ -55,12 +55,16 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\clickToMove.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\dropBlock.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\endGame.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\fallBlockL4.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\moveBlock.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePiece-level2.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePiece.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePieceL4.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePieces.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\teleport.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\teleportA8.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\teleportL4.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\triggerL4.js" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
      <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />

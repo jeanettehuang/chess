@@ -1,15 +1,56 @@
 var lTime : float;
+var arrowTime : float;
 function Update () {
-    	
-	if (Input.GetKeyDown (KeyCode.UpArrow)) transform.Translate (Vector3(0,0,2)); // up
-	if (Input.GetKeyDown (KeyCode.DownArrow)) transform.Translate (Vector3(0,0,-2)); // down
-	if (Input.GetKeyDown (KeyCode.LeftArrow)) transform.Translate (Vector3(-2,0,0)); // left
-	if (Input.GetKeyDown (KeyCode.RightArrow)) transform.Translate (Vector3(2, 0,0)); // right
-	if (Input.GetKeyDown (KeyCode.R)) transform.Translate (Vector3(2,0,2)); // diagonal up and right
-	if (Input.GetKeyDown (KeyCode.W)) transform.Translate (Vector3(-2,0,2)); // diagonal up and left
-	if (Input.GetKeyDown (KeyCode.F)) transform.Translate (Vector3(2,0,-2)); // diagonal down and right
-	if (Input.GetKeyDown (KeyCode.S)) transform.Translate (Vector3(-2,0,-2)); // diagonal down and left
-	
+    
+    // Arrow Keys	
+	if (Input.GetKeyDown (KeyCode.UpArrow)) {
+		if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+			arrowTime = Time.time;
+			transform.Translate (Vector3(0,0,2)); // up
+		}
+	}	
+	if (Input.GetKeyDown (KeyCode.DownArrow)) {
+		if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+			arrowTime = Time.time;	
+			transform.Translate (Vector3(0,0,-2)); // down
+		}
+	}
+	if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+				arrowTime = Time.time;
+				transform.Translate (Vector3(-2,0,0)); // left
+		}
+	}
+	if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+				arrowTime = Time.time;
+				transform.Translate (Vector3(2, 0,0)); // right
+		}
+	}
+	if (Input.GetKeyDown (KeyCode.R)) {
+		if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+			arrowTime = Time.time;
+			transform.Translate (Vector3(2,0,2)); // diagonal up and right
+		}
+	}
+	if (Input.GetKeyDown (KeyCode.W)) {
+		if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+			arrowTime = Time.time;
+			transform.Translate (Vector3(-2,0,2)); // diagonal up and left
+		}
+	}
+	if (Input.GetKeyDown (KeyCode.F)) {
+		if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+			arrowTime = Time.time;
+			transform.Translate (Vector3(2,0,-2)); // diagonal down and right
+		}
+	}
+	if (Input.GetKeyDown (KeyCode.S)) {
+		if (Time.time > arrowTime + 0.5f || Time.time < 0.5f) {
+			arrowTime = Time.time;
+			transform.Translate (Vector3(-2,0,-2)); // diagonal down and left
+		}
+	}
 	// Jump
 	if (Input.GetKeyDown ("space")){		
 		Debug.Log("space, time: " + Time.time);
@@ -26,9 +67,9 @@ function Update () {
 		else {Cam.GetComponent("MouseLook").enabled = false;}
 	}
 
-	// Die after falling off board
-	if (transform.position.y < -1.2){ 
-		Application.LoadLevel(Application.loadedLevel);
-		HealthControl.LIVES -= 1;
-	}
+//	// Die after falling off board
+//	if (transform.position.y < -1.2){ 
+//		Application.LoadLevel(Application.loadedLevel);
+//		HealthControl.LIVES -= 1;
+//	}
 }

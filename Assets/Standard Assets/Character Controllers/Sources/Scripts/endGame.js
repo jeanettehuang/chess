@@ -11,9 +11,15 @@ function OnTriggerEnter (other : Collider) {
 		Application.LoadLevel(2);
 	}
 	
-	// Win hard level
+	// Win third level
 	if (other.tag == "Player" && this.name=="E8Collide-Level3") {
 		yield WaitForSeconds(0.15);
 		Application.LoadLevel(3);
+	}
+	
+	// Win fourth level
+	if (other.tag == "Player" && this.name=="E8Collide-Level3") {
+		yield WaitForSeconds(0.15);
+		Application.LoadLevel(5);
 	}
 }
