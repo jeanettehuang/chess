@@ -13,7 +13,13 @@ function OnTriggerEnter (other : Collider){
 		Application.LoadLevel(Application.loadedLevel);
 		HealthControl.LIVES -= 1;
 	}
-
+	if (other.tag == "Player" && (this.name=="B4Collide") ) {
+		Debug.Log("collision: " + this.name);
+		yield WaitForSeconds(0.25);
+		GameObject.Find("pawnC5").transform.position = other.transform.position;
+		Application.LoadLevel(Application.loadedLevel);
+		HealthControl.LIVES -= 1;
+	}
 
 //	// Die after falling off board
 //	if (transform.position.y < -1.2){ 
