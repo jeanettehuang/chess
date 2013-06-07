@@ -20,6 +20,7 @@ function OnTriggerEnter (other : Collider) {
 	// Win fourth level
 	if (other.tag == "Player" && this.name=="E8Collide-Level4") {
 		yield WaitForSeconds(0.15);
+		HealthControl.LIVES = 7;
 		Application.LoadLevel(5);
 	}
 }
