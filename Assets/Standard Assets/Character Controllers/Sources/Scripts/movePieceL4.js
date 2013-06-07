@@ -1,6 +1,7 @@
 function OnTriggerEnter (other : Collider){
 	
 	if (other.tag == "Player" && (this.name=="B7bCollider") ) {
+		Debug.Log("collision: " + this.name);
 		yield WaitForSeconds(0.25);
 		GameObject.Find("bishopA8").transform.position = other.transform.position;
 		Application.LoadLevel(Application.loadedLevel);

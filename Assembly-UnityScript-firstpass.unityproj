@@ -55,6 +55,7 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\clickToMove.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\dropBlock.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\endGame.js" />
+     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\extraLife.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\fallBlockL4.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\moveBlock.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\movePiece-level2.js" />
