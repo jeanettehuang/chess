@@ -81,7 +81,8 @@ function Update () {
 	}
 	
 	// Start with six lives so it makes sense to pick up a life in level 1
-	if (Application.loadedLevel == 0 && Time.time == 0) {
-		HealthControl.LIVES -= 1;
+	if (Application.loadedLevel == 0 && Time.time == 0 && HealthControl.LIVES == 7) {
+		Debug.Log("asdlf");
+		HealthControl.LIVES = 6;
 	}
 }
